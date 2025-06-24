@@ -49,7 +49,7 @@ Material:
     - _Color_Burn: 18.7
     - _Color_Burn_Strength: 0
     - _Color_Resolution: 16
-    - _Dither_Opacity: 0.0001
+    - _Dither_Opacity: 0
     - _Dither_Spread: 4
     - _Dither_Tiling: 4
     - _Pixelate: 280
