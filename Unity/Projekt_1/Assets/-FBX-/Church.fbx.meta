@@ -3,12 +3,7 @@ guid: 5f51263dc5ec81c43a5d4238d26635bc
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Church
-    second: {fileID: 2100000, guid: 3b2d2adeb5691dd4b964d391e4d0f4d3, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
