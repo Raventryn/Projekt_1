@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.71461767, g: 0.597687, b: 0.42179745, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13955,7 +13955,12 @@ PrefabInstance:
     - target: {fileID: 5870138645646925446, guid: 7c5e89d2c36d29c408162cbb44804c9e,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 100
+      value: 100.00003
+      objectReference: {fileID: 0}
+    - target: {fileID: 5870138645646925446, guid: 7c5e89d2c36d29c408162cbb44804c9e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100.000046
       objectReference: {fileID: 0}
     - target: {fileID: 5870138645646925446, guid: 7c5e89d2c36d29c408162cbb44804c9e,
         type: 3}
@@ -18632,7 +18637,6 @@ Transform:
   - {fileID: 2019986929}
   - {fileID: 215417067}
   - {fileID: 638488358}
-  - {fileID: 1036911932}
   - {fileID: 1577354107}
   - {fileID: 1277394993}
   - {fileID: 1306703757}
@@ -18782,6 +18786,7 @@ Transform:
   - {fileID: 748972837}
   - {fileID: 140871591}
   - {fileID: 1068170813}
+  - {fileID: 1036911932}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1412442883
@@ -28701,6 +28706,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2067502055}
+  - component: {fileID: 2067502056}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -28726,6 +28732,20 @@ Transform:
   - {fileID: 998569364}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -4.734, z: 0}
+--- !u!114 &2067502056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067502054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94c8be39559d589418ba3f5846db1dce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Fade_Duration: 1
+  Image: {fileID: 1610303274}
 --- !u!1 &2072678347
 GameObject:
   m_ObjectHideFlags: 0

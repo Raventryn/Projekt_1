@@ -6,8 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/-Scenes-/Outside.unity
+    guid: 54e6f9e6fbdeb4b4db2cceaeba6be76b
+  - enabled: 1
     path: Assets/-Scenes-/House_Normal.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/-Scenes-/Familytree.unity
+    guid: a9c99664235a5304b8ef1b732cf65a1b
+  - enabled: 1
+    path: Assets/-Scenes-/Forest.unity
+    guid: def8791bed23a654abcb7b6eee8591ca
+  - enabled: 1
+    path: Assets/-Scenes-/Theater.unity
+    guid: 452f51754d43de745ada3479fce7709a
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7,
       type: 2}

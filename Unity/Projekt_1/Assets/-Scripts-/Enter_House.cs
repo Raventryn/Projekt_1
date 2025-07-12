@@ -13,6 +13,8 @@ public class Enter_House : MonoBehaviour
     private Key_Pickup Key_Pickup;   
     private Fade_Scene Fade_Scene;
 
+    private bool Door_Opening;
+
     void Start()
     {
         Key_Pickup = Key.GetComponent<Key_Pickup>();
@@ -20,6 +22,16 @@ public class Enter_House : MonoBehaviour
         MissingKeyText.SetActive(false);
         
         Fade_Scene = GetComponent<Fade_Scene>();
+
+        Door_Opening = false;
+    }
+
+    private void Update()
+    {
+        if(Door_Opening) 
+        {
+            transform.Rotate(Vector3.forward * -5 * Time.deltaTime, Space.Self);
+        }
         
     }
 
@@ -27,10 +39,12 @@ public class Enter_House : MonoBehaviour
     {
         if (Key_Pickup.hasKey && Input.GetKeyDown(KeyCode.E))
         {
-            Fade_Scene.SceneChangeFade();
+            Door_Opening = true;
+            Fade_Scene.SceneChangeFade();    
         }
         else if (Input.GetKeyDown(KeyCode.E))
         {
+            InteractionText.SetActive(false);
             MissingKeyText.SetActive(true);
         }
     }
