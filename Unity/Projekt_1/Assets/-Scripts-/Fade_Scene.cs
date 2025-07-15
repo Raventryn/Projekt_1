@@ -8,7 +8,7 @@ public class Fade_Scene : MonoBehaviour
     public string Scene_Name;
     public float FadeDuration = 2f;
 
-    private GameObject BlackImage;
+    public GameObject BlackImage;
     private CanvasGroup Image;
 
     // Start is called before the first frame update
