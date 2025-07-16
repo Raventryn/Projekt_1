@@ -8912,6 +8912,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1008816000}
   - component: {fileID: 1008816001}
+  - component: {fileID: 1008816002}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -8951,6 +8952,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Fade_Duration: 1
   Image: {fileID: 400220639}
+--- !u!114 &1008816002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008815999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ab7b32fd29875843b3c4b269560d354, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RayLength: 1
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  Hand_Icon: {fileID: 1912852327}
+  Open_Door_Icon: {fileID: 52002452}
+  Closed_Door_Icon: {fileID: 1401689030}
 --- !u!1001 &1061636722
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11816,6 +11836,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pfingstrose
       objectReference: {fileID: 0}
+    - target: {fileID: 3314288542537571660, guid: 3f73ed876386854438f577120fc0882f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3314288542537571660, guid: 3f73ed876386854438f577120fc0882f,
+        type: 3}
+      propertyPath: m_TagString
+      value: FlowerTree
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11827,10 +11857,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3314288542537571660, guid: 3f73ed876386854438f577120fc0882f,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1994843833}
-    - targetCorrespondingSourceObject: {fileID: 3314288542537571660, guid: 3f73ed876386854438f577120fc0882f,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1994843838}
   m_SourcePrefab: {fileID: 100100000, guid: 3f73ed876386854438f577120fc0882f, type: 3}
 --- !u!1 &1994843832 stripped
@@ -11839,19 +11865,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1994843831}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1994843833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1994843832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c769e4dc06d99454999e85c263f51fca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Icon: {fileID: 1912852327}
 --- !u!65 &1994843834
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11867,12 +11880,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.051733956, y: 0.028465487, z: 0.021753166}
-  m_Center: {x: -0.0065043136, y: -0.00006874518, z: -0.004208548}
+  m_Size: {x: 0.001608694, y: 0.0015424693, z: 0.002825462}
+  m_Center: {x: -0.00032595522, y: 0.00011203476, z: 0.0014059823}
 --- !u!114 &1994843838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11885,7 +11898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3d509977602ffb46956758764447da0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene_Name: House_Normal
+  Scene_Name: House_Broken
   FadeDuration: 2
   BlackImage: {fileID: 400220639}
 --- !u!1001 &2004494582

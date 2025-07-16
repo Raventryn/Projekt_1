@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Door_Scene_Change : MonoBehaviour
 {
-    public GameObject Open_Door;
-
     private Fade_Scene FadeScene;
     private bool Door_Opening;
     // Start is called before the first frame update
@@ -20,26 +18,13 @@ public class Door_Scene_Change : MonoBehaviour
     {
         if (Door_Opening)
         {
-            transform.Rotate(Vector3.up * -5 * Time.deltaTime, Space.Self);
+            transform.Rotate(Vector3.forward * -5 * Time.deltaTime, Space.Self);
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void SceneChange()
     {
-        Open_Door.SetActive(true);
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        Open_Door.SetActive(false);
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if(Input.GetKeyDown(KeyCode.E))
-        {
-            Door_Opening = true;
-            FadeScene.SceneChangeFade();
-        }
+        Door_Opening = true;
+        FadeScene.SceneChangeFade();
     }
 }

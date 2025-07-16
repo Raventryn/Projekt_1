@@ -5,6 +5,16 @@ TagManager:
   serializedVersion: 2
   tags:
   - CinemachineTarget
+  - Key
+  - LockedDoor
+  - Door
+  - SceneChangeDoor
+  - DoorOpenOnce
+  - FlowerHouse
+  - FlowerTree
+  - FlowerChurch
+  - SceneChange
+  - FlowerTheater
   layers:
   - Default
   - TransparentFX
@@ -13,7 +23,7 @@ TagManager:
   - Water
   - UI
   - Terrain
-  - 
+  - Interactable
   - 
   - 
   - 

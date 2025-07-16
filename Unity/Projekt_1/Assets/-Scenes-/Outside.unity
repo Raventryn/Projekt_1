@@ -1714,21 +1714,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1906120201}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &136814494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136814490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d9ca34f48ee0894f9fe420d21d43ed7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasKey: 0
-  Key: {fileID: 136814490}
-  InteractionText: {fileID: 1246440483}
 --- !u!65 &136814495
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1744,12 +1729,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.005533996, y: 0.00883684, z: 0.005584962}
-  m_Center: {x: 0.0010052865, y: -0.0037632152, z: -0.00016271055}
+  m_Size: {x: 0.0010526347, y: 0.0016164666, z: 0.000057470377}
+  m_Center: {x: -0.000044208762, y: -0.00015299229, z: 0.000026659072}
 --- !u!4 &140871591 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 624298397461802890, guid: 79d7abfff863ecf409c64371079176da,
@@ -13952,6 +13937,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door_3x1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2022281709232369119, guid: 7c5e89d2c36d29c408162cbb44804c9e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022281709232369119, guid: 7c5e89d2c36d29c408162cbb44804c9e,
+        type: 3}
+      propertyPath: m_TagString
+      value: LockedDoor
+      objectReference: {fileID: 0}
     - target: {fileID: 5870138645646925446, guid: 7c5e89d2c36d29c408162cbb44804c9e,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -14028,6 +14023,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1036911937}
+    - targetCorrespondingSourceObject: {fileID: 2022281709232369119, guid: 7c5e89d2c36d29c408162cbb44804c9e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1036911942}
   m_SourcePrefab: {fileID: 100100000, guid: 7c5e89d2c36d29c408162cbb44804c9e, type: 3}
 --- !u!4 &1036911932 stripped
 Transform:
@@ -14042,7 +14041,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11364375}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1287b82c113bb1c49b47d65f4ce8edf6, type: 3}
   m_Name: 
@@ -14067,7 +14066,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.008999996, y: 0.0065413266, z: 0.019500002}
   m_Center: {x: -0.00750029, y: 0.0024903328, z: 0.009749913}
@@ -14085,6 +14084,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Scene_Name: House_Normal
   FadeDuration: 1
+  BlackImage: {fileID: 0}
+--- !u!114 &1036911942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11364375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c54d8712b08f994abc02267660f60bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1039066191
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31345,6 +31357,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Key
       objectReference: {fileID: 0}
+    - target: {fileID: 8929009512385489531, guid: 33b7311e87656c74dbaa0667c4254662,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8929009512385489531, guid: 33b7311e87656c74dbaa0667c4254662,
+        type: 3}
+      propertyPath: m_TagString
+      value: Key
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31353,10 +31375,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 136814495}
-    - targetCorrespondingSourceObject: {fileID: 8929009512385489531, guid: 33b7311e87656c74dbaa0667c4254662,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 136814494}
   m_SourcePrefab: {fileID: 100100000, guid: 33b7311e87656c74dbaa0667c4254662, type: 3}
 --- !u!1 &1921793644
 GameObject:
@@ -33556,6 +33574,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2067502055}
   - component: {fileID: 2067502056}
+  - component: {fileID: 2067502058}
+  - component: {fileID: 2067502057}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -33595,6 +33615,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Fade_Duration: 1
   Image: {fileID: 1610303274}
+--- !u!114 &2067502057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067502054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3d509977602ffb46956758764447da0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene_Name: House_Normal
+  FadeDuration: 1
+  BlackImage: {fileID: 1610303274}
+--- !u!114 &2067502058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067502054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ab7b32fd29875843b3c4b269560d354, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RayLength: 1
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  Hand_Icon: {fileID: 1246440483}
+  Open_Door_Icon: {fileID: 1725650071}
+  Closed_Door_Icon: {fileID: 1137800894}
 --- !u!1 &2072678347
 GameObject:
   m_ObjectHideFlags: 0

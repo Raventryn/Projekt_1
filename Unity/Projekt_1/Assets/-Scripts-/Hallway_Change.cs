@@ -9,8 +9,6 @@ public class Hallway_Change : MonoBehaviour
     public GameObject Washroom;
     public GameObject Hallway_Normal;
 
-    public bool Picked_Flower;
-
     public GameObject Hallways_Broken;
 
     // Start is called before the first frame update
@@ -22,19 +20,9 @@ public class Hallway_Change : MonoBehaviour
         Hallway_Normal.SetActive(true);
 
         Hallways_Broken.SetActive(false);
-
-        Picked_Flower = false;
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        if(Input.GetKey(KeyCode.E)) 
-        {
-            DisableRooms();
-        }
-    }
-
-    private void DisableRooms()
+    public void DisableRooms()
     {
         First_Floor.SetActive(false);
         Bedroom.SetActive(false);

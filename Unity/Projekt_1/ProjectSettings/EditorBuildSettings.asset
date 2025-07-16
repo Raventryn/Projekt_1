@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/-Scenes-/Familytree.unity
     guid: a9c99664235a5304b8ef1b732cf65a1b
   - enabled: 1
+    path: Assets/-Scenes-/House_Broken.unity
+    guid: 0b45eed9eca49f1468dc298c68085143
+  - enabled: 1
     path: Assets/-Scenes-/Forest.unity
     guid: def8791bed23a654abcb7b6eee8591ca
   - enabled: 1

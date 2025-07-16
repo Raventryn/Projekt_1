@@ -8,13 +8,11 @@ public class Door_Open : MonoBehaviour
     public float openRot=80, closeRot=0, speed=5;
     public bool opening;
     public int doorOpenTime=3;
-    public GameObject InteractionText;
 
     private float openRotActual;
 
     private void Start()
     {
-        InteractionText.SetActive(false);
         opening = false;
         closeRot = transform.localEulerAngles.y;
         openRotActual = closeRot + openRot;
@@ -40,31 +38,16 @@ public class Door_Open : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            StartCoroutine (DoorCloseAuto());
-        } 
-    }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (!opening)
-        {
-            InteractionText.SetActive(true);
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        InteractionText.SetActive(false);
-    }
-
-    IEnumerator DoorCloseAuto()
+    public IEnumerator DoorCloseAuto()
     {
         opening = true;
         yield return new WaitForSeconds(doorOpenTime);
         opening = false;
+    }
+
+    public void TriggerDoor()
+    {
+        StartCoroutine(DoorCloseAuto());
     }
 }

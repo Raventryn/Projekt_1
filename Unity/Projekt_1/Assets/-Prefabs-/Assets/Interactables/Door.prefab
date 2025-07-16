@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2998708918481154443}
   - component: {fileID: 2382437728595886383}
   - component: {fileID: 1532593363899950977}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,12 +49,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.0785656, y: 1.8486228, z: 1.2030134}
-  m_Center: {x: -0.05099392, y: 1.0293705, z: -0.5839925}
+  m_Size: {x: 0.15679932, y: 1.8486228, z: 0.7722752}
+  m_Center: {x: 0.055936813, y: 1.0293705, z: -0.36862338}
 --- !u!114 &1532593363899950977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,6 +84,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Door_3x1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022281709232369119, guid: 7c5e89d2c36d29c408162cbb44804c9e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022281709232369119, guid: 7c5e89d2c36d29c408162cbb44804c9e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5870138645646925446, guid: 7c5e89d2c36d29c408162cbb44804c9e,
         type: 3}
