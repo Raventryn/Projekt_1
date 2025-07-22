@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Quit_Application : MonoBehaviour
+public class White_Fade : MonoBehaviour
 {
     public float FadeDelay = 2;
     public float FadeDuration = 2f;

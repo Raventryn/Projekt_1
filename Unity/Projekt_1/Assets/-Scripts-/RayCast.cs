@@ -154,14 +154,15 @@ public class RayCast : MonoBehaviour
             {
                 Hand_Icon.SetActive(true);
                 MeshRenderer MR = hit.collider .gameObject.GetComponent<MeshRenderer>();
-                Quit_Application QA = hit.collider.gameObject.GetComponent<Quit_Application>();
+                White_Fade QA = hit.collider.gameObject.GetComponent<White_Fade>();
                 Bloom_Theater BT = GameObject.Find("Global Volume").GetComponent<Bloom_Theater>();
+                Collider FC = hit.collider;
                 
                 if(Input.GetKeyDown(KeyCode.E))
                 {
                     MR.enabled = true;
                     flowersPlaced++;
-                    
+                    FC.enabled = false;
                 }
                 else if(flowersPlaced == 3)
                 {
