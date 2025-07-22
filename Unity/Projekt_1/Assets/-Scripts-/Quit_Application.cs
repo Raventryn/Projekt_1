@@ -7,9 +7,7 @@ public class Quit_Application : MonoBehaviour
 {
     public float FadeDelay = 2;
     public float FadeDuration = 2f;
-
     public GameObject BlackImage;
-
 
     private CanvasGroup Image;
 

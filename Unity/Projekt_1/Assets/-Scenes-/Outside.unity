@@ -33649,6 +33649,7 @@ MonoBehaviour:
   Hand_Icon: {fileID: 1246440483}
   Open_Door_Icon: {fileID: 1725650071}
   Closed_Door_Icon: {fileID: 1137800894}
+  flowersSpawned: 0
 --- !u!1 &2072678347
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class RayCast : MonoBehaviour
     public GameObject Hand_Icon;
     public GameObject Open_Door_Icon;
     public GameObject Closed_Door_Icon;
+    public bool flowersSpawned;
 
     private Camera MainCamera;
     private bool hasKey;
@@ -24,6 +25,7 @@ public class RayCast : MonoBehaviour
         Closed_Door_Icon.SetActive(false) ;
         hasKey = false;
         flowersPlaced = 0;
+        flowersSpawned = false;
     }
 
     // Update is called once per frame
@@ -153,14 +155,17 @@ public class RayCast : MonoBehaviour
                 Hand_Icon.SetActive(true);
                 MeshRenderer MR = hit.collider .gameObject.GetComponent<MeshRenderer>();
                 Quit_Application QA = hit.collider.gameObject.GetComponent<Quit_Application>();
+                Bloom_Theater BT = GameObject.Find("Global Volume").GetComponent<Bloom_Theater>();
                 
                 if(Input.GetKeyDown(KeyCode.E))
                 {
                     MR.enabled = true;
                     flowersPlaced++;
+                    
                 }
                 else if(flowersPlaced == 3)
                 {
+                    BT.flowersSpawned = true;
                     QA.StartFade();
                 }
             }
