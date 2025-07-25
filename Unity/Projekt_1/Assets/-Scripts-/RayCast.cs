@@ -53,7 +53,7 @@ public class RayCast : MonoBehaviour
             {
                 if(Input.GetKeyDown(KeyCode.E) && hasKey)
                 {
-                    Door_Scene_Change DSC = hit.collider.gameObject.GetComponent<Door_Scene_Change>();
+                    Door_Scene_Change_Outside DSC = hit.collider.gameObject.GetComponent<Door_Scene_Change_Outside>();
                     DSC.SceneChange();
                 }
                 else if (hasKey)
@@ -163,12 +163,14 @@ public class RayCast : MonoBehaviour
                     MR.enabled = true;
                     flowersPlaced++;
                     FC.enabled = false;
+                    if (flowersPlaced == 3)
+                    {
+                        BT.flowersSpawned = true;
+                        QA.StartFade();
+                    }
+                    Debug.Log("Placed Flower" + flowersPlaced);
                 }
-                else if(flowersPlaced == 3)
-                {
-                    BT.flowersSpawned = true;
-                    QA.StartFade();
-                }
+                
             }
         }
         else

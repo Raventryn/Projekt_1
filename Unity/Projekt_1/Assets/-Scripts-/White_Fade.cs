@@ -33,7 +33,7 @@ public class White_Fade : MonoBehaviour
         }
 
         Image.alpha = 1f;
-        Application.Quit();
+        SceneManager.LoadScene("Outside_End");
     }
 
     public void StartFade()

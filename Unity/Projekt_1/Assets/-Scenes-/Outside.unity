@@ -2660,7 +2660,7 @@ PrefabInstance:
     - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
       propertyPath: field of view
-      value: 40
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
@@ -14026,7 +14026,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2022281709232369119, guid: 7c5e89d2c36d29c408162cbb44804c9e,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1036911942}
+      addedObject: {fileID: 1036911946}
   m_SourcePrefab: {fileID: 100100000, guid: 7c5e89d2c36d29c408162cbb44804c9e, type: 3}
 --- !u!4 &1036911932 stripped
 Transform:
@@ -14085,7 +14085,7 @@ MonoBehaviour:
   Scene_Name: House_Normal
   FadeDuration: 1
   BlackImage: {fileID: 0}
---- !u!114 &1036911942
+--- !u!114 &1036911946
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14094,7 +14094,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 11364375}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c54d8712b08f994abc02267660f60bf, type: 3}
+  m_Script: {fileID: 11500000, guid: 53928cdac16ea394bb23c3e31895f9b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1039066191
@@ -19470,7 +19470,7 @@ PrefabInstance:
     - target: {fileID: 8762286023885395323, guid: 9c489a8547f4d9e4387da15a4ff82c81,
         type: 3}
       propertyPath: m_Lens.FieldOfView
-      value: 40
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

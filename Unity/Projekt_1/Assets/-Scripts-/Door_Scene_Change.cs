@@ -18,7 +18,7 @@ public class Door_Scene_Change : MonoBehaviour
     {
         if (Door_Opening)
         {
-            transform.Rotate(Vector3.forward * -5 * Time.deltaTime, Space.Self);
+            transform.Rotate(Vector3.up * -5 * Time.deltaTime, Space.Self);
         }
     }
 
