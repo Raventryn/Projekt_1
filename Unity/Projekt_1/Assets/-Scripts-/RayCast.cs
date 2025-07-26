@@ -72,7 +72,9 @@ public class RayCast : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     Hallway_Change HC= hit.collider.gameObject.GetComponent<Hallway_Change>();
-                    HC.DisableRooms();
+                    Journal_Pages JP = GameObject.Find("-JOURNAL-").GetComponent<Journal_Pages>();
+                    JP.AddPage(1);
+                    HC.DisableRooms();                  
                     Destroy(hit.collider.gameObject);                 
                 }
             }
@@ -120,9 +122,11 @@ public class RayCast : MonoBehaviour
             {
                 Hand_Icon.SetActive(true);
                 Fade_Scene FS = hit.collider.gameObject.GetComponent<Fade_Scene>();
-                MeshRenderer MR = hit.collider.gameObject.GetComponent<MeshRenderer>();
+                MeshRenderer MR = hit.collider.gameObject.GetComponent<MeshRenderer>();               
                 if (Input.GetKeyDown(KeyCode.E))
                 {
+                    Journal_Pages JP = GameObject.Find("-JOURNAL-").GetComponent<Journal_Pages>();
+                    JP.AddPage(2);
                     FS.SceneChangeFade();
                     MR.enabled = false;
                 }
