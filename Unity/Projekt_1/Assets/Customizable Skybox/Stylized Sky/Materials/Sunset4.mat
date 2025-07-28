@@ -29,9 +29,9 @@ Material:
     m_Ints: []
     m_Floats:
     - _HorizonLineBlendMode: 1
-    - _HorizonLineContribution: 0.36
+    - _HorizonLineContribution: 0.35
     - _HorizonLineExponent: 15
-    - _SkyGradientExponent: 0.25
+    - _SkyGradientExponent: 0.5
     - _SunDiscContribution: 1
     - _SunDiscExponent: 5000
     - _SunDiscExponentSize: 12000
