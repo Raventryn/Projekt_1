@@ -4,11 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Journal_Pages : MonoBehaviour
+public class End_Journal: MonoBehaviour
 {
     public GameObject _Journal;
 
     public GameObject newEntryText;
+
+    public GameObject RepeatingPage;
 
     public GameObject[] Pages;
 
@@ -104,34 +106,28 @@ public class Journal_Pages : MonoBehaviour
         _Journal.SetActive(false);
     }
 
-    public void AddPage(int journalEvent)
+
+    public void ReplaceJournal()
     {
-        Debug.Log("Methode aufgerufen");
-
-        switch(journalEvent)
-        {
-            case 1:
-                Debug.Log("Page added");
-                Known_Pages.Add(Pages[4]);
-                StartCoroutine(EntryText());
-                Debug.Log(Known_Pages.Count);
-                break;
-            case 2:
-                Known_Pages.Add(Pages[6]);
-                StartCoroutine(EntryText());
-                break;
-        }
-    
-
-    }
-
-    public void ReplacePage(int oldPage, int newPage)
-    {
-        Pages[newPage -1].SetActive(false);
-        Known_Pages[oldPage] = Pages[newPage];
+        Debug.Log("Called ReplaceJournal");
         StartCoroutine(EntryText());
+        for ( int i = 0; i < Known_Pages.Count; i++)
+        {
+            Known_Pages[i] = ReplacedPages[i];
+            Debug.Log("Replaced Page");
+        }
+
+        for ( int i = 0;i < 21; i++)
+        {
+            AddRepeatingPage();
+            Debug.Log("Added Page");
+        }
     }
 
+    public void AddRepeatingPage()
+    {
+        Known_Pages.Add(RepeatingPage);
+    }
 
     private void PreviousPage()
     {

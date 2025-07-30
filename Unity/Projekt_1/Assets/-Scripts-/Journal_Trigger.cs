@@ -25,6 +25,7 @@ public class Journal_Trigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         AddPage();
+        other.enabled = false;
     }
 
     private void AddPage()

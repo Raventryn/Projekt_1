@@ -15,6 +15,10 @@ TagManager:
   - FlowerChurch
   - SceneChange
   - FlowerTheater
+  - ReplaceJournal
+  - ForceJournal
+  - HallwayPrompt
+  - TheaterPrompt
   layers:
   - Default
   - TransparentFX

@@ -60,9 +60,13 @@ public class RayCast : MonoBehaviour
                 {
                     Open_Door_Icon.SetActive(true);
                 }
-                else if (!hasKey) 
+                else if (!hasKey && Input.GetKeyDown(KeyCode.E)) 
                 {
-                    Closed_Door_Icon.SetActive(true);   
+                    GameObject.Find("QwestPrompt_2").GetComponent<QuestPromptFade>().TriggerQuestPrompt(0);  
+                }
+                else if (!hasKey)
+                {
+                    Closed_Door_Icon.SetActive(true);
                 }
             }
 
@@ -77,6 +81,12 @@ public class RayCast : MonoBehaviour
                     HC.DisableRooms();                  
                     Destroy(hit.collider.gameObject);                 
                 }
+            }
+
+            if(hit.collider.tag == "HallwayPrompt")
+            {
+                GameObject.Find("QwestPrompt_2").GetComponent<QuestPromptFade>().TriggerQuestPrompt(1);
+                hit.collider.enabled = false;
             }
 
             if(hit.collider.tag == "SceneChangeDoor")
@@ -154,7 +164,13 @@ public class RayCast : MonoBehaviour
                 }
             }
 
-            if(hit.collider.tag == "FlowerTheater")
+            if (hit.collider.tag == "TheaterPrompt")
+            {
+                GameObject.Find("QwestPrompt_2").GetComponent<QuestPromptFade>().TriggerQuestPrompt(1);
+                hit.collider.enabled = false;
+            }
+
+            if (hit.collider.tag == "FlowerTheater")
             {
                 Hand_Icon.SetActive(true);
                 MeshRenderer MR = hit.collider .gameObject.GetComponent<MeshRenderer>();
