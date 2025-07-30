@@ -25,7 +25,7 @@ public class Journal_Trigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         AddPage();
-        other.enabled = false;
+        gameObject.GetComponent<Collider>().enabled = false;
     }
 
     private void AddPage()

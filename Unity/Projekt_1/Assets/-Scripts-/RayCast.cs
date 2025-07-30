@@ -167,7 +167,6 @@ public class RayCast : MonoBehaviour
             if (hit.collider.tag == "TheaterPrompt")
             {
                 GameObject.Find("QwestPrompt_2").GetComponent<QuestPromptFade>().TriggerQuestPrompt(1);
-                hit.collider.enabled = false;
             }
 
             if (hit.collider.tag == "FlowerTheater")
@@ -177,6 +176,7 @@ public class RayCast : MonoBehaviour
                 White_Fade QA = hit.collider.gameObject.GetComponent<White_Fade>();
                 Bloom_Theater BT = GameObject.Find("Global Volume").GetComponent<Bloom_Theater>();
                 Collider FC = hit.collider;
+                GameObject Journal = GameObject.Find("-JOURNAL-");
                 
                 if(Input.GetKeyDown(KeyCode.E))
                 {
@@ -186,6 +186,7 @@ public class RayCast : MonoBehaviour
                     if (flowersPlaced == 3)
                     {
                         BT.flowersSpawned = true;
+                        Destroy(Journal);
                         QA.StartFade();
                     }
                     Debug.Log("Placed Flower" + flowersPlaced);
