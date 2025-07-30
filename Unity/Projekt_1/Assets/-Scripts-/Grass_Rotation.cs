@@ -22,7 +22,7 @@ public class LookAtCamera : MonoBehaviour
         {
             Quaternion rot = Quaternion.LookRotation(lookDirection);
             transform.rotation = rot * Quaternion.Euler(90, 0, 0);
-            Debug.Log("aaa");
+            //Debug.Log("aaa");
         }
 
     }

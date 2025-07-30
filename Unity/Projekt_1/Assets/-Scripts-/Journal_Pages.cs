@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Journal_Pages : MonoBehaviour
 {
@@ -22,15 +23,18 @@ public class Journal_Pages : MonoBehaviour
     private int current_Page = 0;
 
     private bool journalActive = false;
+
     // Start is called before the first frame update
     void Start()
     {
         DontDestroyOnLoad(gameObject);
 
-         TextCG = newEntryText.GetComponent<CanvasGroup>();
+        TextCG = newEntryText.GetComponent<CanvasGroup>();
 
         _Journal.SetActive(false);
         Known_Pages.Add(Pages[0]);
+        Known_Pages.Add(Pages[1]);
+        Known_Pages.Add(Pages[2]);
         Debug.Log(Pages.Length);
         Debug.Log(Known_Pages.Count);
 
@@ -47,18 +51,11 @@ public class Journal_Pages : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.J) && !journalActive)
         {            
-            journalActive = true;
-            Known_Pages[current_Page].SetActive(true);
-            _Journal.SetActive(true);
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;       
+            OpenJournal();
         }
         else if (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.Escape) && journalActive)
         {
-            journalActive = false;
-            _Journal.SetActive(false);
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+            CloseJournal();
         }
 
         if (current_Page == 0)
@@ -86,6 +83,23 @@ public class Journal_Pages : MonoBehaviour
         }
     }
 
+    public void OpenJournal()
+    {
+        journalActive = true;
+        Known_Pages[current_Page].SetActive(true);
+        _Journal.SetActive(true);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void CloseJournal()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        journalActive = false;
+        _Journal.SetActive(false);
+    }
+
     public void AddPage(int journalEvent)
     {
         Debug.Log("Methode aufgerufen");
@@ -94,13 +108,12 @@ public class Journal_Pages : MonoBehaviour
         {
             case 1:
                 Debug.Log("Page added");
-                Known_Pages.Add(Pages[1]);
+                Known_Pages.Add(Pages[4]);
                 StartCoroutine(EntryText());
                 Debug.Log(Known_Pages.Count);
                 break;
             case 2:
-                Known_Pages.Add(Pages[2]);
-                Known_Pages.Add(Pages[3]);
+                Known_Pages.Add(Pages[6]);
                 StartCoroutine(EntryText());
                 break;
         }
@@ -108,11 +121,19 @@ public class Journal_Pages : MonoBehaviour
 
     }
 
+    public void ReplacePage(int oldPage, int newPage)
+    {
+        Pages[newPage -1].SetActive(false);
+        Known_Pages[oldPage] = Pages[newPage];
+        StartCoroutine(EntryText());
+    }
+
     private void PreviousPage()
     {
         Known_Pages[current_Page].SetActive(false);
         current_Page--;
         Known_Pages[current_Page].SetActive(true);
+        Debug.Log(current_Page);
     }
 
     private void NextPage()
@@ -120,6 +141,7 @@ public class Journal_Pages : MonoBehaviour
         Known_Pages[current_Page].SetActive(false);
         current_Page++;
         Known_Pages[current_Page].SetActive(true);
+        Debug.Log(current_Page);
     }
 
     private IEnumerator EntryText()

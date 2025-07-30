@@ -73,7 +73,7 @@ public class RayCast : MonoBehaviour
                 {
                     Hallway_Change HC= hit.collider.gameObject.GetComponent<Hallway_Change>();
                     Journal_Pages JP = GameObject.Find("-JOURNAL-").GetComponent<Journal_Pages>();
-                    JP.AddPage(1);
+                    JP.ReplacePage(2, 3);
                     HC.DisableRooms();                  
                     Destroy(hit.collider.gameObject);                 
                 }
@@ -126,7 +126,7 @@ public class RayCast : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     Journal_Pages JP = GameObject.Find("-JOURNAL-").GetComponent<Journal_Pages>();
-                    JP.AddPage(2);
+
                     FS.SceneChangeFade();
                     MR.enabled = false;
                 }
