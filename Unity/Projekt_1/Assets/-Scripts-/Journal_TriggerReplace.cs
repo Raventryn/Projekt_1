@@ -12,6 +12,10 @@ public class Journal_TriggerReplace : MonoBehaviour
 
     public GameObject Image;
 
+    public Animator armAnimator;
+
+    public AnimationClip armAnimation;
+
     private End_Journal Journal;
 
     private bool JournalOpened = false;
@@ -24,6 +28,7 @@ public class Journal_TriggerReplace : MonoBehaviour
     {
         Journal = GameObject.Find("-JOURNAL-").GetComponent<End_Journal>();
         CG = Image.GetComponent<CanvasGroup>();
+        armAnimator.gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
 
     private void Update()
@@ -59,10 +64,14 @@ public class Journal_TriggerReplace : MonoBehaviour
 
     private IEnumerator Cutscene()
     {
-        //Animation
+        GameObject.Find("PlayerCapsule").GetComponent<CharacterController>().enabled = false;
+        Cursor.lockState = CursorLockMode.None;
+        armAnimator.gameObject.GetComponent<MeshRenderer>().enabled = true;
+        armAnimator.SetTrigger("JournalClosed");
 
-        yield return new WaitForSeconds(FadeDelay);
+        yield return new WaitForSeconds(armAnimation.length + 2);
 
+        armAnimator.gameObject.GetComponent<MeshRenderer>().enabled = false;
         float t = 0f;
         while (t < FadeDuration)
 
@@ -75,6 +84,6 @@ public class Journal_TriggerReplace : MonoBehaviour
         }
 
         CG.alpha = 1f;
-        //SceneManager.LoadScene("");
+        SceneManager.LoadScene("Credits");
     }
 }

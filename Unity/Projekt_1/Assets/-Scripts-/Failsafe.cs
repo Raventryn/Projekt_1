@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Failsafe : MonoBehaviour
 {
-    public Vector3 Checkpoint;
+    public GameObject Checkpoint;
 
     public float Y_Coordinate;
 
@@ -23,7 +23,7 @@ public class Failsafe : MonoBehaviour
         if(transform.position.y < Y_Coordinate)
         {
             PC.enabled = false;
-            transform.position = Checkpoint;
+            transform.position = Checkpoint.transform.position;
             Fade.StartCoroutine(Fade.FadeIn(1));
             PC.enabled = true;
         }

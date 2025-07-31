@@ -30708,7 +30708,7 @@ PrefabInstance:
     - target: {fileID: 1619687370789890981, guid: a7e9de05a981b8f498b45263efeb54bf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.117
+      value: 12.13
       objectReference: {fileID: 0}
     - target: {fileID: 1619687370789890981, guid: a7e9de05a981b8f498b45263efeb54bf,
         type: 3}
@@ -30718,7 +30718,7 @@ PrefabInstance:
     - target: {fileID: 1619687370789890981, guid: a7e9de05a981b8f498b45263efeb54bf,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.397
+      value: -0.44
       objectReference: {fileID: 0}
     - target: {fileID: 1619687370789890981, guid: a7e9de05a981b8f498b45263efeb54bf,
         type: 3}
@@ -37535,7 +37535,7 @@ PrefabInstance:
     - target: {fileID: 7184014076526559405, guid: 3541740da4c07a749a5414dd79eac05d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3936062
+      value: -1.81
       objectReference: {fileID: 0}
     - target: {fileID: 7184014076526559405, guid: 3541740da4c07a749a5414dd79eac05d,
         type: 3}
@@ -47240,6 +47240,8 @@ MonoBehaviour:
   FlowerDried: {fileID: 1930083774}
   GrassHealthy: {fileID: 305920034}
   GrassDried: {fileID: 67475603}
+  maryAnimator: {fileID: 1599249416}
+  maryAnimation: {fileID: 7400000, guid: 3d5bb6bd22e031848b28336c1d0e7f56, type: 2}
 --- !u!65 &1174003939
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69987,17 +69989,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 26028e36b04d481418813529aadbc107,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.865761
+      value: 13.232
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 26028e36b04d481418813529aadbc107,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.16900063
+      value: -0.1690006
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 26028e36b04d481418813529aadbc107,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.04905224
+      value: -1.034
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 26028e36b04d481418813529aadbc107,
         type: 3}
@@ -70047,8 +70049,39 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 26028e36b04d481418813529aadbc107,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1599249416}
   m_SourcePrefab: {fileID: 100100000, guid: 26028e36b04d481418813529aadbc107, type: 3}
+--- !u!1 &1599249415 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 26028e36b04d481418813529aadbc107,
+    type: 3}
+  m_PrefabInstance: {fileID: 1599249414}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1599249416
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599249415}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adcea814eb3577b4aa38875a08d6524d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1599770413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78202,7 +78235,7 @@ PrefabInstance:
     - target: {fileID: 314886694742647529, guid: 636511938b4a70040a37231efc86ba2c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.023607254
+      value: -1.45
       objectReference: {fileID: 0}
     - target: {fileID: 314886694742647529, guid: 636511938b4a70040a37231efc86ba2c,
         type: 3}

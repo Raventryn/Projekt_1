@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RayCast : MonoBehaviour
 {
@@ -70,7 +71,23 @@ public class RayCast : MonoBehaviour
                 }
             }
 
-            if(hit.collider.tag == "FlowerHouse")
+            if (hit.collider.tag == "Letter")
+            {
+                Hand_Icon.SetActive(true);
+                Letter_Open LO = hit.collider.gameObject.GetComponent<Letter_Open>();
+
+                if (Input.GetKeyDown(KeyCode.E) && !LO.letterOpen)
+                {
+                    LO.ShowLetter();
+                }
+
+                else if (LO.letterOpen && (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.E)))
+                {
+                    LO.CloseLetter();
+                }
+            }
+
+            if (hit.collider.tag == "FlowerHouse")
             {
                 Hand_Icon.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.E))

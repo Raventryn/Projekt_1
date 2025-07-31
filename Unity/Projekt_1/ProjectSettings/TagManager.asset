@@ -19,6 +19,7 @@ TagManager:
   - ForceJournal
   - HallwayPrompt
   - TheaterPrompt
+  - Letter
   layers:
   - Default
   - TransparentFX

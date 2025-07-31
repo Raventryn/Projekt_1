@@ -9,6 +9,8 @@ public class Church_Flower : MonoBehaviour
     public GameObject FlowerDried;
     public GameObject GrassHealthy;
     public GameObject GrassDried;
+    public Animator maryAnimator;
+    public AnimationClip maryAnimation;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,7 @@ public class Church_Flower : MonoBehaviour
 
     public void SpawnMirrors()
     {
+        maryAnimator.SetTrigger("FlowerPicked");
         Mirrors.SetActive(true);
         FlowerDried.SetActive(true);
         FlowersHealthy.SetActive(false);
