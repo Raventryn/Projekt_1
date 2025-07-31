@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -24,9 +25,14 @@ public class Journal_TriggerReplace : MonoBehaviour
 
     private CanvasGroup CG;
 
+    private GameObject PCR;
+
+    private bool triggeredCutscene;
+
     private void Start()
     {
         Journal = GameObject.Find("-JOURNAL-").GetComponent<End_Journal>();
+        PCR = GameObject.Find("PlayerCameraRoot");
         CG = Image.GetComponent<CanvasGroup>();
         armAnimator.gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
@@ -41,6 +47,7 @@ public class Journal_TriggerReplace : MonoBehaviour
         {
             StartCoroutine(Cutscene());
         }
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -65,6 +72,7 @@ public class Journal_TriggerReplace : MonoBehaviour
     private IEnumerator Cutscene()
     {
         GameObject.Find("PlayerCapsule").GetComponent<CharacterController>().enabled = false;
+        PCR.transform.localEulerAngles = new Vector3(0, PCR.transform.localEulerAngles.y, PCR.transform.localEulerAngles.z);
         Cursor.lockState = CursorLockMode.None;
         armAnimator.gameObject.GetComponent<MeshRenderer>().enabled = true;
         armAnimator.SetTrigger("JournalClosed");
@@ -84,6 +92,7 @@ public class Journal_TriggerReplace : MonoBehaviour
         }
 
         CG.alpha = 1f;
+        triggeredCutscene = false;
         SceneManager.LoadScene("Credits");
     }
 }

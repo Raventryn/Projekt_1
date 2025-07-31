@@ -10,7 +10,11 @@ public class End_Journal: MonoBehaviour
 
     public GameObject newEntryText;
 
-    public GameObject RepeatingPage;
+    public GameObject RepeatingPage_1;
+
+    public GameObject RepeatingPage_2;
+
+    public GameObject RepeatingPage_3;
 
     public GameObject[] Pages;
 
@@ -102,6 +106,7 @@ public class End_Journal: MonoBehaviour
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        Known_Pages[current_Page].SetActive(false);
         journalActive = false;
         _Journal.SetActive(false);
     }
@@ -117,16 +122,14 @@ public class End_Journal: MonoBehaviour
             Debug.Log("Replaced Page");
         }
 
-        for ( int i = 0;i < 21; i++)
-        {
-            AddRepeatingPage();
-            Debug.Log("Added Page");
-        }
+        AddRepeatingPage();
     }
 
     public void AddRepeatingPage()
     {
-        Known_Pages.Add(RepeatingPage);
+        Known_Pages.Add(RepeatingPage_1);
+        Known_Pages.Add(RepeatingPage_2);
+        Known_Pages.Add(RepeatingPage_3);
     }
 
     private void PreviousPage()
