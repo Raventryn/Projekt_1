@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Door_Scene_Change_Outside : MonoBehaviour
 {
+    public AudioClip doorLocked;
+    public AudioClip doorOpen;
+
     private Fade_Scene FadeScene;
     private bool Door_Opening;
     // Start is called before the first frame update

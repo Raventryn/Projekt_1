@@ -6,14 +6,21 @@ public class Fade_In : MonoBehaviour
 {
     public float Fade_Duration = 1;
     public GameObject Image;
-
+    public bool playsAudio;
+    private AudioSource Audio;
     private CanvasGroup CanvasGroup;
     // Start is called before the first frame update
     void Start()
     {
         CanvasGroup = Image.GetComponent<CanvasGroup>();
         CanvasGroup.alpha = 1.0f;
+        Audio = GetComponent<AudioSource>();
         StartCoroutine(FadeIn(Fade_Duration));
+
+        if (playsAudio ) 
+        { 
+            Audio.Play();
+        }
     }
 
 

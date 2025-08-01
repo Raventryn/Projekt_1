@@ -20,6 +20,9 @@ TagManager:
   - HallwayPrompt
   - TheaterPrompt
   - Letter
+  - GroundWood
+  - GroundDirt
+  - GroundGrass
   layers:
   - Default
   - TransparentFX

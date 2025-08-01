@@ -26,6 +26,18 @@ public class End_Journal: MonoBehaviour
 
     public bool journalActive = false;
 
+    public AudioClip journalOpen;
+
+    public AudioClip journalClose;
+
+    public AudioClip pageBack;
+
+    public AudioClip pageForward;
+
+    public AudioClip newEntry;
+
+    private AudioSource Audio;
+
     private List<GameObject> Known_Pages = new List<GameObject>();
 
     private CanvasGroup TextCG;
@@ -40,6 +52,7 @@ public class End_Journal: MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         TextCG = newEntryText.GetComponent<CanvasGroup>();
+        Audio = GetComponent<AudioSource>();
 
         _Journal.SetActive(false);
         Known_Pages.Add(Pages[0]);
@@ -100,6 +113,8 @@ public class End_Journal: MonoBehaviour
         _Journal.SetActive(true);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        Audio.clip = journalOpen;
+        Audio.Play();
     }
 
     public void CloseJournal()
@@ -109,6 +124,8 @@ public class End_Journal: MonoBehaviour
         Known_Pages[current_Page].SetActive(false);
         journalActive = false;
         _Journal.SetActive(false);
+        Audio.clip = journalClose;
+        Audio.Play();
     }
 
 
@@ -138,6 +155,8 @@ public class End_Journal: MonoBehaviour
         current_Page--;
         Known_Pages[current_Page].SetActive(true);
         Debug.Log(current_Page);
+        Audio.clip = pageBack;
+        Audio.Play();
     }
 
     private void NextPage()
@@ -146,11 +165,15 @@ public class End_Journal: MonoBehaviour
         current_Page++;
         Known_Pages[current_Page].SetActive(true);
         Debug.Log(current_Page);
+        Audio.clip = pageForward;
+        Audio.Play();
     }
 
     private IEnumerator EntryText()
     {
         Debug.Log("Coroutine gestartet");
+        Audio.clip = newEntry;
+        Audio.Play();
         TextCG.alpha = 0f;
 
         float t = 1.3f;

@@ -15,7 +15,7 @@ public class Failsafe : MonoBehaviour
     private void Start()
     {
         PC = GetComponent<CharacterController>();
-        Fade = GetComponent<Fade_In>();
+        Fade = GameObject.Find("Player").GetComponent<Fade_In>();
     }
 
     private void Update()

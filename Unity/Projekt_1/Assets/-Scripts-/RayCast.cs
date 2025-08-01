@@ -45,16 +45,22 @@ public class RayCast : MonoBehaviour
                 Hand_Icon.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    Destroy(hit.collider.gameObject);
+                    hit.collider.enabled = false;
+                    hit.collider.gameObject.GetComponent<MeshRenderer>().enabled = false;
+                    hit.collider.gameObject.GetComponent<AudioSource>().Play();
                     hasKey = true;
                 }
             }
             
             if(hit.collider.tag == "LockedDoor")
             {
-                if(Input.GetKeyDown(KeyCode.E) && hasKey)
+                Door_Scene_Change_Outside DSC = hit.collider.gameObject.GetComponent<Door_Scene_Change_Outside>();
+                AudioSource Audio = hit.collider.gameObject.GetComponent<AudioSource>();
+
+                if (Input.GetKeyDown(KeyCode.E) && hasKey)
                 {
-                    Door_Scene_Change_Outside DSC = hit.collider.gameObject.GetComponent<Door_Scene_Change_Outside>();
+                    Audio.clip = DSC.doorOpen;
+                    Audio.Play();
                     DSC.SceneChange();
                 }
                 else if (hasKey)
@@ -63,7 +69,9 @@ public class RayCast : MonoBehaviour
                 }
                 else if (!hasKey && Input.GetKeyDown(KeyCode.E)) 
                 {
-                    GameObject.Find("QwestPrompt_2").GetComponent<QuestPromptFade>().TriggerQuestPrompt(0);  
+                    GameObject.Find("QwestPrompt_2").GetComponent<QuestPromptFade>().TriggerQuestPrompt(0);
+                    Audio.clip = DSC.doorLocked;
+                    Audio.Play();
                 }
                 else if (!hasKey)
                 {
@@ -95,8 +103,10 @@ public class RayCast : MonoBehaviour
                     Hallway_Change HC= hit.collider.gameObject.GetComponent<Hallway_Change>();
                     Journal_Pages JP = GameObject.Find("-JOURNAL-").GetComponent<Journal_Pages>();
                     JP.ReplacePage(2, 3);
-                    HC.DisableRooms();                  
-                    Destroy(hit.collider.gameObject);                 
+                    HC.DisableRooms();
+                    hit.collider.enabled = false;
+                    hit.collider.gameObject.GetComponent<MeshRenderer>().enabled = false;
+                    GameObject.Find("Creak_Audio").GetComponent<AudioSource>().Play();
                 }
             }
 
@@ -124,21 +134,32 @@ public class RayCast : MonoBehaviour
                     
                     Door_Open DO = hit.collider.gameObject.GetComponent<Door_Open>();
                     DO.TriggerDoor();
+                    hit.collider.gameObject.GetComponent <AudioSource>().Play();
                 }
             }
 
             if (hit.collider.tag == "DoorOpenOnce")
             {
                 Door_Open_Once DOO = hit.collider.gameObject.GetComponent<Door_Open_Once>();
+                AudioSource Audio = hit.collider.gameObject.GetComponent<AudioSource>();
                 bool hasOpened = DOO.has_Opened;
                 if (Input.GetKeyDown(KeyCode.E) && !hasOpened)
                 {                  
                     DOO.TriggerDoor();
+                    Audio.clip = DOO.doorOpen;
+                    Audio.Play();
                 }
                 else if (!hasOpened)
                 {
                     Open_Door_Icon.SetActive(true);
                 }
+                else if (hasOpened && Input.GetKeyDown(KeyCode.E))
+                {
+                    Closed_Door_Icon.SetActive(false);
+                    Audio.clip = DOO.doorLocked;
+                    Audio.Play();
+                }
+
                 else if (hasOpened)
                 {
                     Closed_Door_Icon.SetActive(false);
@@ -148,14 +169,14 @@ public class RayCast : MonoBehaviour
             if(hit.collider.tag == "FlowerTree")
             {
                 Hand_Icon.SetActive(true);
-                Fade_Scene FS = hit.collider.gameObject.GetComponent<Fade_Scene>();
-                MeshRenderer MR = hit.collider.gameObject.GetComponent<MeshRenderer>();               
+                Fade_Scene FS = hit.collider.gameObject.GetComponent<Fade_Scene>();              
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     Journal_Pages JP = GameObject.Find("-JOURNAL-").GetComponent<Journal_Pages>();
 
                     FS.SceneChangeFade();
-                    MR.enabled = false;
+                    hit.collider.enabled = false;
+                    hit.collider.gameObject.GetComponent<MeshRenderer>().enabled = false;
                 }
             }
 
@@ -166,7 +187,10 @@ public class RayCast : MonoBehaviour
                 if(Input.GetKeyDown(KeyCode.E))
                 {
                     CF.SpawnMirrors();
-                    Destroy(hit.collider.gameObject);
+                    hit.collider.enabled = false;
+                    hit.collider.gameObject.GetComponent<MeshRenderer>().enabled = false;
+                    GameObject.Find("Portrait.Mary").GetComponent<AudioSource>().Play();
+                    GameObject.Find("Blood_2").GetComponent<AudioSource>().Play();
                 }
             }
 

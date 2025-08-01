@@ -8,6 +8,8 @@ public class Door_Open_Once : MonoBehaviour
     public float openRot=80, closeRot=0, speed=5;
     public bool opening;
     public int doorOpenTime=3;
+    public AudioClip doorOpen;
+    public AudioClip doorLocked;
 
 
     private float openRotActual;
