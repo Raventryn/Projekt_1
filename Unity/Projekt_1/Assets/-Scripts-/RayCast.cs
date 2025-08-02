@@ -107,6 +107,7 @@ public class RayCast : MonoBehaviour
                     hit.collider.enabled = false;
                     hit.collider.gameObject.GetComponent<MeshRenderer>().enabled = false;
                     GameObject.Find("Creak_Audio").GetComponent<AudioSource>().Play();
+                    GameObject.Find("Musicbox (1)").GetComponent<AudioSource>().enabled = false;
                 }
             }
 

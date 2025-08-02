@@ -72,11 +72,23 @@ public class AudioOnWalk : MonoBehaviour
             PlayerAudio.clip = DirtSteps;
             PlayerAudio.Play();
         }
+
+        if (other.CompareTag("GroundWoodReplace"))
+        {
+            PlayerAudio.clip = WoodSteps;
+            PlayerAudio.Play();
+        }
+
+        if (other.CompareTag("GroundGrassReplace"))
+        {
+            PlayerAudio.clip = GrassSteps;
+            PlayerAudio.Play();
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (PlayerAudio.clip != DefaultSteps)
+        if ((PlayerAudio.clip != DefaultSteps) && !other.CompareTag("GroundWoodReplace"))
         {
             PlayerAudio.clip = DefaultSteps;
             PlayerAudio.Play();

@@ -24,6 +24,7 @@ public class Door_Scene_Change : MonoBehaviour
 
     public void SceneChange()
     {
+        GetComponent<AudioSource>().Play();
         Door_Opening = true;
         FadeScene.SceneChangeFade();
     }

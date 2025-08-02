@@ -23,6 +23,8 @@ TagManager:
   - GroundWood
   - GroundDirt
   - GroundGrass
+  - GroundWoodReplace
+  - GroundGrassReplace
   layers:
   - Default
   - TransparentFX
