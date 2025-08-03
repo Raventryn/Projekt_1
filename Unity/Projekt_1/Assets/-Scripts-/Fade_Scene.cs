@@ -27,11 +27,11 @@ public class Fade_Scene : MonoBehaviour
     public IEnumerator FadeOut(float duration)
     {
 
+
         float t = 0f;
         while (t < duration)
 
         {
-
             t += Time.deltaTime;
             Image.alpha = Mathf.Clamp01(t / duration);
             yield return null;

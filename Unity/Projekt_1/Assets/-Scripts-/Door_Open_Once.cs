@@ -11,7 +11,6 @@ public class Door_Open_Once : MonoBehaviour
     public AudioClip doorOpen;
     public AudioClip doorLocked;
 
-
     private float openRotActual;
     public bool has_Opened;
 
@@ -49,11 +48,11 @@ public class Door_Open_Once : MonoBehaviour
         opening = true;
         yield return new WaitForSeconds(doorOpenTime);
         opening = false;
-        has_Opened = true;
     }
 
     public void TriggerDoor()
     {
         StartCoroutine(DoorCloseAuto());
     }
+
 }

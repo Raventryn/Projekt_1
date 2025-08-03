@@ -143,25 +143,25 @@ public class RayCast : MonoBehaviour
             {
                 Door_Open_Once DOO = hit.collider.gameObject.GetComponent<Door_Open_Once>();
                 AudioSource Audio = hit.collider.gameObject.GetComponent<AudioSource>();
-                bool hasOpened = DOO.has_Opened;
-                if (Input.GetKeyDown(KeyCode.E) && !hasOpened)
+                
+                if (Input.GetKeyDown(KeyCode.E) && !DOO.has_Opened)
                 {                  
                     DOO.TriggerDoor();
                     Audio.clip = DOO.doorOpen;
                     Audio.Play();
                 }
-                else if (!hasOpened)
+                else if (!DOO.has_Opened)
                 {
                     Open_Door_Icon.SetActive(true);
                 }
-                else if (hasOpened && Input.GetKeyDown(KeyCode.E))
+                else if (DOO.has_Opened && Input.GetKeyDown(KeyCode.E))
                 {
                     Closed_Door_Icon.SetActive(false);
                     Audio.clip = DOO.doorLocked;
                     Audio.Play();
                 }
 
-                else if (hasOpened)
+                else if (DOO.has_Opened)
                 {
                     Closed_Door_Icon.SetActive(false);
                 }
@@ -230,6 +230,7 @@ public class RayCast : MonoBehaviour
                         BT.flowersSpawned = true;
                         Destroy(Journal);
                         QA.StartFade();
+                        
                     }
                     Debug.Log("Placed Flower" + flowersPlaced);
                 }

@@ -17,6 +17,24 @@ public class Journal_TriggerReplace : MonoBehaviour
 
     public AnimationClip armAnimation;
 
+    public AudioSource Audio;
+
+    public AudioSource WindAudio;
+
+    public AudioSource Grass1Audio;
+
+    public AudioSource Grass2Audio;
+
+    public AudioSource Grass3Audio;
+
+    public AudioSource Cicada1Audio;
+
+    public AudioSource Cicada2Audio;
+
+    public AudioSource Cicada3Audio;
+
+    public AudioSource WindmillAudio;
+
     private End_Journal Journal;
 
     private bool JournalOpened = false;
@@ -46,6 +64,7 @@ public class Journal_TriggerReplace : MonoBehaviour
         else if((Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.J)) && JournalOpened && JournalReplaced) 
         {
             StartCoroutine(Cutscene());
+            StartCoroutine(FadeOutAudio(2));
         }
 
     }
@@ -76,6 +95,7 @@ public class Journal_TriggerReplace : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         armAnimator.gameObject.GetComponent<MeshRenderer>().enabled = true;
         armAnimator.SetTrigger("JournalClosed");
+        Audio.Play();
 
         yield return new WaitForSeconds(armAnimation.length + 2);
 
@@ -94,5 +114,38 @@ public class Journal_TriggerReplace : MonoBehaviour
         CG.alpha = 1f;
         triggeredCutscene = false;
         SceneManager.LoadScene("Credits");
+    }
+
+    private IEnumerator FadeOutAudio(float duration)
+    {
+        Debug.Log("Started Coroutine");
+        float t = 0f;
+        while (t < duration)
+
+        {
+
+            t += Time.deltaTime;
+            WindAudio.volume -= 0.01f;
+            Grass1Audio.volume -= 0.001f;
+            Grass2Audio.volume -= 0.001f;
+            Grass3Audio.volume -= 0.001f;
+            Cicada1Audio.volume -= 0.001f;
+            Cicada2Audio.volume -= 0.001f;
+            Cicada3Audio.volume -= 0.001f;
+            WindmillAudio.volume -= 0.001f;
+            yield return null;
+            Debug.Log(Audio.volume);
+
+        }
+
+        WindAudio.volume = 0f;
+        Grass1Audio.volume = 0f;
+        Grass2Audio.volume = 0f;
+        Grass3Audio.volume = 0f;
+        Cicada1Audio.volume = 0f;
+        Cicada2Audio.volume = 0f;
+        Cicada3Audio.volume = 0f;
+        WindmillAudio.volume = 0f;
+
     }
 }

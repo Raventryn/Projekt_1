@@ -39,6 +39,7 @@ public class Fade_In : MonoBehaviour
 
         }
 
+        AudioListener.volume = 1f;
         CanvasGroup.alpha = 0f;
     }
 }

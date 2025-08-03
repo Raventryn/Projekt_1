@@ -7,10 +7,14 @@ public class QuestPromptFade : MonoBehaviour
     public bool showOnStart = false;
 
     private CanvasGroup CG;
+
+    private AudioSource Audio;
+
     // Start is called before the first frame update
     void Start()
     {
         CG = GetComponent<CanvasGroup>();
+        Audio = GetComponent<AudioSource>();
         CG.alpha = 0f;
         if(showOnStart)
         {
@@ -20,13 +24,15 @@ public class QuestPromptFade : MonoBehaviour
 
     public void TriggerQuestPrompt(float delay)
     {
+        
         StartCoroutine(Fade(delay));
     }
 
     private IEnumerator Fade(float startDelay)
     {
         yield return new WaitForSeconds(startDelay);
-       CG.enabled = true;
+        CG.enabled = true;
+        Audio.Play();
 
         float t = 0f;
         while (t < 1)
