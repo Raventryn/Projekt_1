@@ -7,7 +7,7 @@ public class Fade_Scene : MonoBehaviour
 {
     public string Scene_Name;
     public float FadeDuration = 2f;
-
+    public bool hasAudioFade;
     public GameObject BlackImage;
     private CanvasGroup Image;
 
@@ -26,18 +26,28 @@ public class Fade_Scene : MonoBehaviour
 
     public IEnumerator FadeOut(float duration)
     {
+        float maxVolume = GameObject.Find("Options_DDOL").GetComponent<GameSettings>().volume;
 
+        if (hasAudioFade)
+        {
+            AudioListener.volume = maxVolume;
+        }
 
         float t = 0f;
         while (t < duration)
 
         {
+            if (hasAudioFade)
+            {
+                AudioListener.volume -= 0.01f;
+            }
             t += Time.deltaTime;
             Image.alpha = Mathf.Clamp01(t / duration);
             yield return null;
 
         }
 
+        AudioListener.volume = 0f;
         Image.alpha = 1f;
         SceneManager.LoadScene(Scene_Name);
     }

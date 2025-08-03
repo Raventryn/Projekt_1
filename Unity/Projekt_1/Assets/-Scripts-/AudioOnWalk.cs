@@ -23,10 +23,15 @@ public class AudioOnWalk : MonoBehaviour
 
     private float HighPitch;
 
+    private bool changedSteps;
+
+    private int stepCase;
+
     private void Start()
     {
         DefaultPitch = PlayerAudio.pitch;
         HighPitch = DefaultPitch * 1.55f;
+        stepCase = 6;
     }
 
     // Update is called once per frame
@@ -35,7 +40,7 @@ public class AudioOnWalk : MonoBehaviour
         if((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)) && PlayerFPS.Grounded && !AudioIsPlaying)
         {
             AudioIsPlaying = true;
-            PlayerAudio.Play();
+            SwitchPlayerSteps();
             Debug.Log("Audio Plays");
         }
         else if(!(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)) || !PlayerFPS.Grounded)
@@ -52,46 +57,115 @@ public class AudioOnWalk : MonoBehaviour
         {
             PlayerAudio.pitch = DefaultPitch;
         }
+
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("GroundGrass"))
+        {
+            stepCase = 1;
+        }
+
+        if (other.CompareTag("GroundWood"))
+        {
+            stepCase = 2;
+        }
+        if (other.CompareTag("GroundDirt"))
+        {
+            stepCase = 3;
+        }
+
+        if (other.CompareTag("GroundWoodReplace"))
+        {
+            stepCase = 4;
+        }
+
+        if (other.CompareTag("GroundGrassReplace"))
+        {
+            stepCase = 5;
+        }
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("GroundGrass"))
         {
-            PlayerAudio.clip = GrassSteps;
-            PlayerAudio.Play();
+            stepCase = 1;
+            PlayerAudio.Stop();
+            AudioIsPlaying = false;
         }
 
         if (other.CompareTag("GroundWood"))
         {
-            PlayerAudio.clip = WoodSteps;
-            PlayerAudio.Play();
+            stepCase = 2;
+            PlayerAudio.Stop();
+            AudioIsPlaying = false;
         }
         if (other.CompareTag("GroundDirt"))
         {
-            PlayerAudio.clip = DirtSteps;
-            PlayerAudio.Play();
+            stepCase = 3;
+            PlayerAudio.Stop();
+            AudioIsPlaying = false;
         }
 
         if (other.CompareTag("GroundWoodReplace"))
         {
-            PlayerAudio.clip = WoodSteps;
-            PlayerAudio.Play();
+            stepCase = 4;
+            PlayerAudio.Stop();
+            AudioIsPlaying = false;
         }
 
         if (other.CompareTag("GroundGrassReplace"))
         {
-            PlayerAudio.clip = GrassSteps;
-            PlayerAudio.Play();
+            stepCase = 5;
+            PlayerAudio.Stop();
+            AudioIsPlaying = false;
         }
+
     }
+
 
     private void OnTriggerExit(Collider other)
     {
         if ((PlayerAudio.clip != DefaultSteps) && !other.CompareTag("GroundWoodReplace"))
         {
-            PlayerAudio.clip = DefaultSteps;
-            PlayerAudio.Play();
+            stepCase = 6;
+            PlayerAudio.Stop();
+            AudioIsPlaying = false;
+        }
+    }
+
+    private void SwitchPlayerSteps()
+    {
+
+        switch (stepCase)
+        {
+            case 1:
+                PlayerAudio.clip = GrassSteps;
+                PlayerAudio.Play();
+                break;
+            case 2:
+                PlayerAudio.clip = WoodSteps;
+                PlayerAudio.Play();
+                break;
+            case 3:
+                PlayerAudio.clip = DirtSteps;
+                PlayerAudio.Play();
+                break;
+            case 4:
+                PlayerAudio.clip = WoodSteps;
+                PlayerAudio.Play();
+                break;
+            case 5:
+                PlayerAudio.clip = GrassSteps;
+                PlayerAudio.Play();
+                break;
+            case 6:
+                PlayerAudio.clip = DefaultSteps;
+                PlayerAudio.Play();
+                break;
         }
     }
 }

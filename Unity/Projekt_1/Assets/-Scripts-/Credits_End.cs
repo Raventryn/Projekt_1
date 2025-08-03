@@ -19,5 +19,6 @@ public class Credits_End : MonoBehaviour
     {
         yield return new WaitForSeconds(credits.length + 2);
         fadeScene.SceneChangeFade();
+        Destroy(GameObject.Find("Options_DDOL"));
     }
 }
