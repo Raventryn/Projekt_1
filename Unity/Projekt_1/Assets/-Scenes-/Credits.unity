@@ -1068,84 +1068,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-    At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-    no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-    amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-    et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-    sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-    magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-    dolor sit amet.  \r\n\r\nDuis autem vel eum iriure dolor in hendrerit in vulputate
-    velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at
-    vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
-    delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
-    consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-    dolore magna aliquam erat volutpat.  \r\n\r\nUt wisi enim ad minim veniam, quis
-    nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-    consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
-    molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros
-    et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit
-    augue duis dolore te feugait nulla facilisi.  \r\n\r\nNam liber tempor cum soluta
-    nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer
-    possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-    Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-    lobortis nisl ut aliquip ex ea commodo consequat.  \r\n\r\nDuis autem vel eum
-    iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
-    dolore eu feugiat nulla facilisis.   \r\n\r\nAt vero eos et accusam et justo
-    duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-    elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-    erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-    Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-    amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam
-    diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt
-    justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed
-    takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor
-    sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-    ut labore et dolore magna aliquyam erat.  \r\n\r\nConsetetur sadipscing elitr,
-    sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-    sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-    vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-    no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-    amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-    et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-    sanctus.  \r\n\r\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-    diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-    diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-    vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-    no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-    amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-    et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-    sanctus est Lorem ipsum dolor sit amet.  \r\n\r\nDuis autem vel eum iriure dolor
-    in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu
-    feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui
-    blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.  \r\n\r\nUt
-    wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
-    nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
-    in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
-    facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
-    luptatum zzril delenit augue duis dolore te feugait nulla facilisi.  \r\n\r\nNam
-    liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
-    quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer
-    adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-    ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.  \r\n\r\nDuis
-    autem vel eum iriure dolor in"
+  m_text: "\nThank you for playing!\n\n\n\n\n\n\n\n\n\nCredits\n\n\n\n\nStory\n3D
+    / 2D Asset Creation\nLeveldesign\nUI Design\netc.\n\nJasmin Kirschner (me)\n\n\n\n\nCode\n\nSebastian
+    Loch \n\n\n\n\n\n\nThird Party Credits\n\n\n\n\nSounds from Pixabay.com\n\nPixel
+    Shader from Klausbdl on the Unity Discussion Forum\n\nVolumtric Fog from Invelord
+    on Youtube.com\n\nPaintings from Artvee.com\n\nBase textures from AmbientCG.com\n\nOriginal
+    Statue Model from BIGE on Sketchfab.com\n\nTree PNGs from Elbolillo on Sketchfab.com\n\nSpiderweb
+    from Vecteezy.com\n\nSpiderweb from clipart-library.com\n\nPaper texture from
+    Anna Lysenko on Vecteezy.com\n\nPaper texture from unblast.com\n\nTree silhouhettes
+    from onlygfx.com\n\nFog PNG from pngkey.com\n\nBush PNG from freepng.pictures\n\n\n\n\nSome
+    assets are from my asset pack \"PSX Style Southern House Pack\" which includes
+    the credits for those specific assets\n\nIf you think your asset/texture/etc.
+    was used in the making of this game, but has not been credited, please let me
+    know!\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
